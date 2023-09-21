@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/gestionetudiant?createDatabaseIfNotExist=true&userSSL=false&useUnicode=true&useJDBCCompliantTimezoneShift=true
+    username: root
+    password:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  ## Specify DBMS
+  jpa:
+    database: MYSQL
+    show-sql: false
+    properties:
+      hibernate:
+        ejb:
+          interceptor: com.amadou.gestionEtudiant.interceptor.Interceptor
+
+    ## Hibernate DDL Auto (create, create-drop, update)
+    hibernate:
+      ddl-auto: update
+      dialect: org.hibernate.dialect.MySQL5Dialect
+server:
+  port: 8082
+flickr:
+  apiKey: 0bb8cb624c743ceadf7d7c886da30c26
+  apiSecret: cd9e392e0649cfe4
+  appKey: 72157720874552230-c08e77c569f2592c
+  appSecret: e2b55644a776cd06
